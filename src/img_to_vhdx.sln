@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "encryption", "libs\encryption\encryption.vcxproj", "{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "file_operations", "libs\file_operations\file_operations.vcxproj", "{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "file_reader", "libs\file_reader\file_reader.vcxproj", "{13FAAEA4-948B-4251-8601-42A5E3A23B79}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "img_to_vhdx", "img_to_vhdx\img_to_vhdx.vcxproj", "{71A3C603-3F4C-4CDE-830C-939DAE5D4BC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79} = {13FAAEA4-948B-4251-8601-42A5E3A23B79}
+		{486B4F80-F17A-4EC5-842A-1A406D676235} = {486B4F80-F17A-4EC5-842A-1A406D676235}
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA} = {77F6E3F6-21BD-4752-9FEE-5E216151CAFA}
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D} = {A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43} = {E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vhdx_manager", "libs\vhdx_manager\vhdx_manager.vcxproj", "{77F6E3F6-21BD-4752-9FEE-5E216151CAFA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "restore", "libs\restore\restore.vcxproj", "{486B4F80-F17A-4EC5-842A-1A406D676235}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}.Debug|x64.ActiveCfg = Debug|x64
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}.Debug|x64.Build.0 = Debug|x64
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}.Release|x64.ActiveCfg = Release|x64
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43}.Release|x64.Build.0 = Release|x64
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}.Debug|x64.ActiveCfg = Debug|x64
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}.Debug|x64.Build.0 = Debug|x64
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}.Release|x64.ActiveCfg = Release|x64
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D}.Release|x64.Build.0 = Release|x64
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79}.Debug|x64.ActiveCfg = Debug|x64
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79}.Debug|x64.Build.0 = Debug|x64
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79}.Release|x64.ActiveCfg = Release|x64
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79}.Release|x64.Build.0 = Release|x64
+		{71A3C603-3F4C-4CDE-830C-939DAE5D4BC3}.Debug|x64.ActiveCfg = Debug|x64
+		{71A3C603-3F4C-4CDE-830C-939DAE5D4BC3}.Debug|x64.Build.0 = Debug|x64
+		{71A3C603-3F4C-4CDE-830C-939DAE5D4BC3}.Release|x64.ActiveCfg = Release|x64
+		{71A3C603-3F4C-4CDE-830C-939DAE5D4BC3}.Release|x64.Build.0 = Release|x64
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA}.Debug|x64.ActiveCfg = Debug|x64
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA}.Debug|x64.Build.0 = Debug|x64
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA}.Release|x64.ActiveCfg = Release|x64
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA}.Release|x64.Build.0 = Release|x64
+		{486B4F80-F17A-4EC5-842A-1A406D676235}.Debug|x64.ActiveCfg = Debug|x64
+		{486B4F80-F17A-4EC5-842A-1A406D676235}.Debug|x64.Build.0 = Debug|x64
+		{486B4F80-F17A-4EC5-842A-1A406D676235}.Release|x64.ActiveCfg = Release|x64
+		{486B4F80-F17A-4EC5-842A-1A406D676235}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3A1792D-5EF2-4ABF-B712-0A2752A6AC43} = {88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}
+		{A87F4D5E-86D1-4584-A73D-F1EC8E44C10D} = {88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}
+		{13FAAEA4-948B-4251-8601-42A5E3A23B79} = {88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}
+		{77F6E3F6-21BD-4752-9FEE-5E216151CAFA} = {88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}
+		{486B4F80-F17A-4EC5-842A-1A406D676235} = {88DC3BA2-1325-4FC6-81E4-4D792CB48EC1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D5FF38C-F9A6-41E9-A074-541AFF41B06C}
+	EndGlobalSection
+EndGlobal

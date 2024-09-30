@@ -1,0 +1,52 @@
+===============================================================================
+Copyright (c) 2024 Paramount Software UK Limited. All rights reserved.
+
+This software is licensed under the MIT License.
+
+MIT License:
+------------
+The MIT License is a permissive free software license originating at the 
+Massachusetts Institute of Technology (MIT). It puts only very limited 
+restriction on reuse and has, therefore, high license compatibility. 
+
+Under the MIT License, users are free to use, copy, modify, merge, publish, 
+distribute, sublicense, and/or sell copies of the software. The only 
+requirements are that the license and copyright notice must be included in 
+all copies or substantial portions of the software.
+
+Project Description:
+--------------------
+This repository contains a VS2022 solution that includes a collection of 
+C++ libraries and an executable to demonstrate how to read and recover 
+data from Macrium Reflect X backup files.
+
+Third Party Libraries:
+----------------------
+1. Zstandard ("Zstd"):
+   This software uses Zstandard ("Zstd"), a high performance compression 
+   algorithm developed by Facebook, Inc. Zstd is licensed under both the 
+   BSD-style license and the GPLv2.
+   For more details, please see the Zstd GitHub repository:
+   BSD-style license: https://github.com/facebook/zstd/blob/dev/LICENSE
+   GPLv2 license: https://github.com/facebook/zstd/blob/dev/COPYING
+
+2. OpenSSL (depends on zlib):
+   This software uses OpenSSL, a robust, commercial-grade, and full-featured 
+   toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer 
+   (SSL) protocols. OpenSSL is licensed under an Apache-style license and 
+   depends on the zlib library for compression functionality.
+   For more details, please see the OpenSSL license page:
+   https://www.openssl.org/source/license.html
+
+3. zlib:
+   This software uses zlib, a massively spiffy yet delicately unobtrusive 
+   compression library. zlib is licensed under the zlib License.
+   For more details, please see the zlib license page:
+   https://zlib.net/zlib_license.html
+
+4. nlohmann/json:
+   This software uses nlohmann/json, a modern C++ toolkit for JSON for 
+   Modern C++. nlohmann/json is licensed under the MIT License.
+   For more details, please see the nlohmann/json GitHub repository:
+   https://github.com/nlohmann/json/blob/develop/LICENSE.MIT
+===============================================================================

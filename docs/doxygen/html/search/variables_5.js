@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['email_0',['email',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a9abaacb909da6469cc4440a847deba62',1,'file_structs::BackupDefinition']]],
+  ['email_5fenabled_1',['email_enabled',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a6f74a9ee7971e1f6434bf9f89b4bcdd6',1,'file_structs::BackupDefinition']]],
+  ['enable_2',['enable',['../dc/d34/structfile__structs_1_1_post_backup.html#abf582d65eb9c937a0d8a80fc7fae4076',1,'file_structs::PostBackup::enable'],['../dd/d71/structfile__structs_1_1_retention.html#a2da5b9321c85bd56aaa7dd31a12f44ba',1,'file_structs::Retention::enable'],['../d3/d6d/structfile__structs_1_1_encryption.html#afc1d00fe44d2a5305c017b2402747196',1,'file_structs::Encryption::enable']]],
+  ['encryption_3',['Encryption',['../db/d8e/struct_header_flags.html#ab892a9d6e9b1255cc44b905dc1111564',1,'HeaderFlags']]],
+  ['end_4',['end',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#a4f6cbed7e03c06ad14e1931616798e79',1,'file_structs::Partition::FileSystem::end'],['../dc/d88/structfile__structs_1_1_partition_1_1_partition_geometry.html#a814d735bf38854087cc1c5d0c8a4e938',1,'file_structs::Partition::PartitionGeometry::end']]],
+  ['end_5fcylinder_5',['end_cylinder',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#ac175c5b296ee020abac0d2ca604218a6',1,'file_structs::Partition::PartitionEntry']]],
+  ['end_5fhead_6',['end_head',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#a3afdcb14bf48863ca235b99d40a346bf',1,'file_structs::Partition::PartitionEntry']]],
+  ['endhead_7',['endHead',['../d6/d1d/struct_partition.html#a67c18d4348609afb2afc0e616959ef12',1,'Partition']]],
+  ['ending_5flba_8',['ending_lba',['../d4/dc0/struct__gpt__entry.html#a0c284fd208664f6d35cb226671275ccf',1,'_gpt_entry']]],
+  ['endsectorcylinder_9',['endSectorCylinder',['../d6/d1d/struct_partition.html#a396ceed540efa5721dd524fd364dfe7b',1,'Partition']]],
+  ['exclude_5ffiles_10',['exclude_files',['../df/dbc/structfile__structs_1_1bdf_folder_filters.html#a2f15f65ff14c055f88ec6ad533f2a801',1,'file_structs::bdfFolderFilters']]],
+  ['exclude_5ffolders_11',['exclude_folders',['../df/dbc/structfile__structs_1_1bdf_folder_filters.html#acc78322c0d31c5b86b07f4eda60d1a91',1,'file_structs::bdfFolderFilters']]],
+  ['exclude_5fhidden_5ffiles_12',['exclude_hidden_files',['../df/dbc/structfile__structs_1_1bdf_folder_filters.html#ae8263e1aef6f09955ae6e08a680b6910',1,'file_structs::bdfFolderFilters']]],
+  ['exclude_5fsystem_5ffiles_13',['exclude_system_files',['../df/dbc/structfile__structs_1_1bdf_folder_filters.html#ad4e44d1b344d08a38be2bc5679bf320f',1,'file_structs::bdfFolderFilters']]],
+  ['ext_5fpar_5ftable_14',['EXT_PAR_TABLE',['../d9/dd3/metadataheader_8h.html#af82ee4852ddb8e2c6b07e5afee2cd160',1,'metadataheader.h']]],
+  ['extended_5fpartition_5fcount_15',['extended_partition_count',['../d1/d3f/structfile__structs_1_1_disk_1_1_disk_header.html#a3a8bfd62a8efb5e888d9daa47ce25a84',1,'file_structs::Disk::DiskHeader']]],
+  ['extended_5fpartition_5fsector_5foffset_16',['extended_partition_sector_offset',['../d1/d3f/structfile__structs_1_1_disk_1_1_disk_header.html#afe08c02511405c7f9ae44e4d8880dfcd',1,'file_structs::Disk::DiskHeader']]],
+  ['extendedpartitions_17',['extendedPartitions',['../d4/dcc/structfile__structs_1_1_disk_1_1_disk_layout.html#a7cceb782ca38277d5be4695e0e9576d6',1,'file_structs::Disk::DiskLayout']]]
+];

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['sectors_5fper_5fcluster_0',['sectors_per_cluster',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#aab9ca5e0470eae0a5361eb1b445769c2',1,'file_structs::Partition::FileSystem']]],
+  ['sectors_5fper_5ftrack_1',['sectors_per_track',['../da/d06/structfile__structs_1_1_disk_1_1_disk_geometry.html#a91145d4b9c4fe952957f18efc90a5943',1,'file_structs::Disk::DiskGeometry']]],
+  ['shadow_5fcopy_2',['shadow_copy',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#ae4aeff965fbc0ed3ea06ee63ebd05d47',1,'file_structs::Partition::FileSystem']]],
+  ['signature_3',['signature',['../d1/d88/struct_boot_record.html#a9c2805321a2cfe685041d84326cbd2e8',1,'BootRecord::signature'],['../da/d66/struct__gpt__header.html#a3d09ea3c366a617baa6d47e2abd192e5',1,'_gpt_header::signature'],['../de/d1d/structfile__structs_1_1bdf_disk.html#a1aed10369615ba1ab5d772c175010766',1,'file_structs::bdfDisk::signature']]],
+  ['site_5fmanager_5fcookie_4',['site_manager_cookie',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a8823ba3d9d50d1c59642ba2568f9a5ac',1,'file_structs::BackupDefinition']]],
+  ['sitemanager_5fcookie_5fenabled_5',['sitemanager_cookie_enabled',['../dc/d8d/structfile__structs_1_1_backup_definition.html#af6e344ecc79daa0176df63075170a544',1,'file_structs::BackupDefinition']]],
+  ['sizeof_5fpartition_5fentry_6',['sizeof_partition_entry',['../da/d66/struct__gpt__header.html#aa5cd6819d1edda3bbf999fdbe1380bee',1,'_gpt_header']]],
+  ['split_5ffile_7',['split_file',['../db/def/structfile__structs_1_1_header.html#a4590e3795a23148c95d4791c47a953e0',1,'file_structs::Header']]],
+  ['start_8',['start',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#aa0090286fa149195db98bec076de273b',1,'file_structs::Partition::FileSystem::start'],['../dc/d88/structfile__structs_1_1_partition_1_1_partition_geometry.html#aa2fe70d87a9d7f2467a286ef3471e3e5',1,'file_structs::Partition::PartitionGeometry::start']]],
+  ['start_5fcylinder_9',['start_cylinder',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#ad681fbb26f94ea5fd7c8351f353e9a7f',1,'file_structs::Partition::PartitionEntry']]],
+  ['start_5fhead_10',['start_head',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#aa1e38143c7f09387f118017d991efc89',1,'file_structs::Partition::PartitionEntry']]],
+  ['starthead_11',['startHead',['../d6/d1d/struct_partition.html#a36182e2ee744f7abd7a49c15535c8a10',1,'Partition']]],
+  ['starting_5flba_12',['starting_lba',['../d4/dc0/struct__gpt__entry.html#a6c87ced214eb7134c8d8ae4afa04c38d',1,'_gpt_entry']]],
+  ['startsectorcylinder_13',['startSectorCylinder',['../d6/d1d/struct_partition.html#a036c0f1086a69e25f54699b568fb68ba',1,'Partition']]],
+  ['status_14',['status',['../d6/d1d/struct_partition.html#aafdb0ee80b0d13ec79202ada05e37c93',1,'Partition::status'],['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#a04c7663aaa7175030b35a231693dfbaa',1,'file_structs::Partition::PartitionEntry::status']]],
+  ['success_5fattach_5flog_15',['success_attach_log',['../d0/db0/structfile__structs_1_1bdf_email.html#a7251d33796574102d019801c3d599b7d',1,'file_structs::bdfEmail']]],
+  ['success_5fattach_5fvss_5flog_16',['success_attach_vss_log',['../d0/db0/structfile__structs_1_1bdf_email.html#a631c2127279a67d610ae2066108d7019',1,'file_structs::bdfEmail']]],
+  ['success_5fcontent_17',['success_content',['../d0/db0/structfile__structs_1_1bdf_email.html#a71d171233bb04b04ef9f7a42c3a67685',1,'file_structs::bdfEmail']]],
+  ['success_5fenable_18',['success_enable',['../d0/db0/structfile__structs_1_1bdf_email.html#a68926e22849764d66cea96dd79cd91e0',1,'file_structs::bdfEmail']]],
+  ['success_5frecipients_19',['success_recipients',['../d0/db0/structfile__structs_1_1bdf_email.html#acfdc4bf4e17f693398c5ada9cba70f0b',1,'file_structs::bdfEmail']]],
+  ['success_5fsubject_20',['success_subject',['../d0/db0/structfile__structs_1_1bdf_email.html#a28389a5556ad2777f87d61efedaf6535',1,'file_structs::bdfEmail']]],
+  ['system_5fdisk_21',['system_disk',['../dd/d9a/structfile__structs_1_1vi_boot_map.html#a0ea1b05fb3da9bc66f35161ad4113150',1,'file_structs::viBootMap']]],
+  ['system_5fpartition_22',['system_partition',['../d3/d5d/structfile__structs_1_1_auxiliary_data.html#a568a699f5506aee34d677d671fe0f92d',1,'file_structs::AuxiliaryData']]]
+];

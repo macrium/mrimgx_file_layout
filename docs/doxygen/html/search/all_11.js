@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['getaesvalue_0',['getAESValue',['../d3/d6d/structfile__structs_1_1_encryption.html#a1d3c290c45599ff9037253b7af091467',1,'file_structs::Encryption']]],
+  ['getbackupfilewithfullindex_1',['getBackupFileWithFullIndex',['../d2/dec/struct_backup_set.html#a2fc35abfda74dcb0dadf582083eb82df',1,'BackupSet']]],
+  ['getbootable_2',['GetBootable',['../dc/df6/namespace_image_enums.html#af3f78b73866521ceb9bb4f5a4c6e7383',1,'ImageEnums']]],
+  ['getcompressiontext_3',['GetCompressionText',['../d0/d0b/enums_8h.html#a3895c282c5e7a182c2798aec84750729',1,'GetCompressionText(ImageEnums::CompressionType type):&#160;enums_to_text.cpp'],['../d0/d6a/enums__to__text_8cpp.html#a3895c282c5e7a182c2798aec84750729',1,'GetCompressionText(ImageEnums::CompressionType type):&#160;enums_to_text.cpp']]],
+  ['getcurrentfileoffset_4',['getCurrentFileOffset',['../d4/d19/file__operations_8cpp.html#a8cc357627189cd2ebe944eac9b3d35c9',1,'getCurrentFileOffset(std::fstream *file):&#160;file_operations.cpp'],['../d2/d64/file__operations_8h.html#a8cc357627189cd2ebe944eac9b3d35c9',1,'getCurrentFileOffset(std::fstream *file):&#160;file_operations.cpp']]],
+  ['getderivedkey_5',['getDerivedKey',['../da/d8f/encryption_8cpp.html#ac1df9d7ab15b08397eb144b548d35ed0',1,'getDerivedKey(const uint8_t(&amp;imageid)[8], const std::string &amp;strPassword, const int iterations, std::array&lt; uint8_t, KEY_LENGTH &gt; &amp;DerivedKey):&#160;encryption.cpp'],['../d6/ddf/encryption_8h.html#ac1df9d7ab15b08397eb144b548d35ed0',1,'getDerivedKey(const uint8_t(&amp;imageid)[8], const std::string &amp;strPassword, const int iterations, std::array&lt; uint8_t, KEY_LENGTH &gt; &amp;DerivedKey):&#160;encryption.cpp']]],
+  ['getdiskformattext_6',['GetDiskFormatText',['../d0/d0b/enums_8h.html#aa940d959622fb56fde688814451a5095',1,'GetDiskFormatText(ImageEnums::DiskFormat type):&#160;enums_to_text.cpp'],['../d0/d6a/enums__to__text_8cpp.html#aa940d959622fb56fde688814451a5095',1,'GetDiskFormatText(ImageEnums::DiskFormat type):&#160;enums_to_text.cpp']]],
+  ['getdiskpath_7',['GetDiskPath',['../d0/d65/class_v_h_d_x_manager.html#af96d5dc12bad9bf72deb5b638583cdb9',1,'VHDXManager']]],
+  ['getdisktorestorefromdisknumber_8',['getDiskToRestoreFromDiskNumber',['../de/db9/file__reader_8cpp.html#aa67cb88e8b35e1aead8a70b3fa8a776a',1,'getDiskToRestoreFromDiskNumber(const file_structs::fileLayout &amp;backupLayout, int &amp;diskNumber, file_structs::Disk::DiskLayout &amp;diskToRestore):&#160;file_reader.cpp'],['../d0/de7/file__reader_8h.html#aa67cb88e8b35e1aead8a70b3fa8a776a',1,'getDiskToRestoreFromDiskNumber(const file_structs::fileLayout &amp;backupLayout, int &amp;diskNumber, file_structs::Disk::DiskLayout &amp;diskToRestore):&#160;file_reader.cpp']]],
+  ['getencryptiontext_9',['GetEncryptionText',['../d0/d0b/enums_8h.html#a59329f772a3b63d79973099a34805a9b',1,'GetEncryptionText(ImageEnums::AES type):&#160;enums_to_text.cpp'],['../d0/d6a/enums__to__text_8cpp.html#a59329f772a3b63d79973099a34805a9b',1,'GetEncryptionText(ImageEnums::AES type):&#160;enums_to_text.cpp']]],
+  ['getfilehandle_10',['getFileHandle',['../d2/dec/struct_backup_set.html#acdcf9c8e8e70a6670c1fce08ea3948f5',1,'BackupSet']]],
+  ['getfilesystemtype_11',['GetFileSystemType',['../d0/d0b/enums_8h.html#aab4c7dcc5479fc176a0e29278d9026e2',1,'GetFileSystemType(ImageEnums::FileSystemType type):&#160;enums_to_text.cpp'],['../d0/d6a/enums__to__text_8cpp.html#aab4c7dcc5479fc176a0e29278d9026e2',1,'GetFileSystemType(ImageEnums::FileSystemType type):&#160;enums_to_text.cpp']]],
+  ['getfullindexbeforedelta_12',['getFullIndexBeforeDelta',['../d0/d13/backup__set_8cpp.html#a8ec98ef3498b5e2e6f0bcc2c0877f463',1,'backup_set.cpp']]],
+  ['getkeyhmac_13',['getKeyHMAC',['../da/d8f/encryption_8cpp.html#a725959eb01c8b2598ad3a6c0d7608cff',1,'getKeyHMAC(std::array&lt; uint8_t, KEY_LENGTH &gt; DerivedKey):&#160;encryption.cpp'],['../d6/ddf/encryption_8h.html#a725959eb01c8b2598ad3a6c0d7608cff',1,'getKeyHMAC(std::array&lt; uint8_t, KEY_LENGTH &gt; DerivedKey):&#160;encryption.cpp']]],
+  ['gpt_5fentry_14',['gpt_entry',['../da/d4b/disk__structs_8h.html#a6f6e8f2b0e1d7b04b9e1129c8d634aac',1,'disk_structs.h']]],
+  ['gpt_5fentry_15',['GPT_ENTRY',['../da/d4b/disk__structs_8h.html#aa058b916edad71fc9a04a8dffc9d0d0e',1,'disk_structs.h']]],
+  ['gpt_5fentry_5fattributes_16',['gpt_entry_attributes',['../da/d4b/disk__structs_8h.html#a8d50805dc55d44c4b32cd84fd8e89a74',1,'disk_structs.h']]],
+  ['gpt_5fentry_5fattributes_17',['GPT_ENTRY_ATTRIBUTES',['../da/d4b/disk__structs_8h.html#ad01c28f52258c1eb83ffb49107f03759',1,'disk_structs.h']]],
+  ['gpt_5fheader_18',['gpt_header',['../da/d4b/disk__structs_8h.html#ad61ba967b94027dd27637edcb4e4fba6',1,'disk_structs.h']]],
+  ['gpt_5fheader_19',['GPT_HEADER',['../da/d4b/disk__structs_8h.html#af2f0f181aeaf29723c409df2dda7c3bf',1,'disk_structs.h']]],
+  ['guidelines_20',['Coding Standards and Guidelines',['../da/dc7/md_mrimg__file__layout_2src_2_s_t_a_n_d_a_r_d_s.html',1,'']]]
+];

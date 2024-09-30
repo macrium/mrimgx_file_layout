@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['last_5fusable_5flba_0',['last_usable_lba',['../da/d66/struct__gpt__header.html#a6b35196faec63047d6b2b846edde6f77',1,'_gpt_header']]],
+  ['lastblock_1',['LastBlock',['../db/d8e/struct_header_flags.html#ae9f3930fab82a8e425ce45c3d4b6fdb0',1,'HeaderFlags']]],
+  ['layout_2',['Macrium Reflect X Image File layout',['../d9/d57/md_mrimg__file__layout_2docs_2_f_i_l_e___l_a_y_o_u_t.html#autotoc_md5',1,'']]],
+  ['layout_20and_20formatting_3',['3. Code Layout and Formatting',['../da/dc7/md_mrimg__file__layout_2src_2_s_t_a_n_d_a_r_d_s.html#autotoc_md35',1,'']]],
+  ['layout_20documentation_4',['File layout documentation',['../d1/da0/md_mrimg__file__layout_2docs_2_r_e_a_d_m_e.html#autotoc_md18',1,'']]],
+  ['lcn0_5ffile_5fnumber_5',['lcn0_file_number',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#a673f3d2e7f2d7d602c6f9ab0a1b6d898',1,'file_structs::Partition::FileSystem']]],
+  ['lcn0_5foffset_6',['lcn0_offset',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#abfb201c472954588e52dd3ca1b6ac7af',1,'file_structs::Partition::FileSystem']]],
+  ['length_7',['length',['../dc/d88/structfile__structs_1_1_partition_1_1_partition_geometry.html#a194b7a8f815b0458713ae4ac0ab7a554',1,'file_structs::Partition::PartitionGeometry']]],
+  ['let_20s_20dive_20deeper_20by_20looking_20at_20the_20metadata_20elements_20that_20make_20up_20the_20image_20file_3a_8',['Let&apos;s dive deeper by looking at the metadata elements that make up the image file:',['../d9/d57/md_mrimg__file__layout_2docs_2_f_i_l_e___l_a_y_o_u_t.html#autotoc_md8',1,'']]],
+  ['level_9',['level',['../dc/d34/structfile__structs_1_1_post_backup.html#ab275fd7b8914723c128ca5991c95a769',1,'file_structs::PostBackup']]],
+  ['limit_5ffile_5fsize_10',['limit_file_size',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a29a29105c23ef83371f133a4b55e0f9e',1,'file_structs::BackupDefinition']]],
+  ['linux_5fblocks_5fper_5fgroup_11',['linux_blocks_per_group',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#a0184ffbcacafbb547b253ffee0c3065a',1,'file_structs::Partition::FileSystem']]],
+  ['linux_5fgroup_5fcount_12',['linux_group_count',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#af55e102e4a217263319ec0707bdb6f08',1,'file_structs::Partition::FileSystem']]],
+  ['local_13',['LOCAL',['../dc/df6/namespace_image_enums.html#a871a7eebd3177cea94c2558a9c183f09a54b4c4075463b2e02cd69f5cd139b5b2',1,'ImageEnums']]],
+  ['logical_14',['Logical',['../dc/df6/namespace_image_enums.html#ad47c93ee918e2d186b26fe385c8cf5f4ae7a731a6342f126055b89b80d800a180',1,'ImageEnums']]],
+  ['looking_20at_20the_20metadata_20elements_20that_20make_20up_20the_20image_20file_3a_15',['Let&apos;s dive deeper by looking at the metadata elements that make up the image file:',['../d9/d57/md_mrimg__file__layout_2docs_2_f_i_l_e___l_a_y_o_u_t.html#autotoc_md8',1,'']]],
+  ['low_5fspace_5fgb_5fthreshold_16',['low_space_gb_threshold',['../db/de4/structfile__structs_1_1_disk_space_management.html#aafbc12e09c0dd6a1621ccf873fd2b605',1,'file_structs::DiskSpaceManagement']]],
+  ['low_5fspace_5fpurge_17',['low_space_purge',['../db/de4/structfile__structs_1_1_disk_space_management.html#abcc9f04447430681726dd7f6819f7f6c',1,'file_structs::DiskSpaceManagement']]],
+  ['lpefi_5fguid_5ft_18',['LPEFI_GUID_T',['../da/d4b/disk__structs_8h.html#a85660069051da101a9c88625cf13dbff',1,'disk_structs.h']]],
+  ['lpgpt_5fentry_19',['LPGPT_ENTRY',['../da/d4b/disk__structs_8h.html#ab8a6a7606721b8b1a879507b3f1c8591',1,'disk_structs.h']]],
+  ['lpgpt_5fentry_5fattributes_20',['LPGPT_ENTRY_ATTRIBUTES',['../da/d4b/disk__structs_8h.html#a2516eb8c55e13b47734f4486df71b354',1,'disk_structs.h']]],
+  ['lpgpt_5fheader_21',['LPGPT_HEADER',['../da/d4b/disk__structs_8h.html#ac29543e6ee076e0eb7c8ac10369dac70',1,'disk_structs.h']]]
+];

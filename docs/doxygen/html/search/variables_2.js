@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['backup_5fdefinition_0',['backup_definition',['../d3/d5d/structfile__structs_1_1_auxiliary_data.html#a9a8b5d48d421f9006a62704104c4bf4c',1,'file_structs::AuxiliaryData']]],
+  ['backup_5fdefinition_5ffile_1',['backup_definition_file',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a1a7c67d6433cbbc26e41371364a37933',1,'file_structs::BackupDefinition']]],
+  ['backup_5fformat_2',['backup_format',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a6d139eaedaa73de88188d225e6c149bf',1,'file_structs::BackupDefinition::backup_format'],['../db/def/structfile__structs_1_1_header.html#a54ad7dd73b3ea7c36266cef9fbc550a1',1,'file_structs::Header::backup_format']]],
+  ['backup_5fguid_3',['backup_guid',['../db/def/structfile__structs_1_1_header.html#a9ee7c75f5e517280558a62f75450fef8',1,'file_structs::Header']]],
+  ['backup_5fntfs_5fpermissions_4',['backup_ntfs_permissions',['../d3/dcd/structfile__structs_1_1bdf_file_and_folder.html#ac9ebf98783d5cb038ba0befcf967f8af',1,'file_structs::bdfFileAndFolder']]],
+  ['backup_5ftime_5',['backup_time',['../db/def/structfile__structs_1_1_header.html#ae2eda6755655c3f4bc63b50a3382feb4',1,'file_structs::Header']]],
+  ['backup_5ftype_6',['backup_type',['../db/def/structfile__structs_1_1_header.html#ac3532d1ec0548a9794953e659a93a94e',1,'file_structs::Header']]],
+  ['backupfilelayoutforrestoration_7',['backupFileLayoutForRestoration',['../d2/dec/struct_backup_set.html#ac1b83549f80c7a7b2f2512cd62cbd25e',1,'BackupSet']]],
+  ['backupset_5ftime_8',['backupset_time',['../db/def/structfile__structs_1_1_header.html#a8058c1e7180969c7bc149257a3413362',1,'file_structs::Header']]],
+  ['bitlocker_5fstate_9',['bitlocker_state',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#a5cca1749b3c766996b301cc358adfb9c',1,'file_structs::Partition::FileSystem']]],
+  ['bitmap_5fheader_10',['BITMAP_HEADER',['../d9/dd3/metadataheader_8h.html#a0e2b502c08e80955f7473e8953434958',1,'metadataheader.h']]],
+  ['block_5fcount_11',['block_count',['../d2/d2d/structfile__structs_1_1_partition_1_1_partition_header.html#a436cf14c0fab9b28689e89c9923b9dee',1,'file_structs::Partition::PartitionHeader']]],
+  ['block_5flength_12',['block_length',['../dd/dc8/structdata__block.html#af1ebff0b6a38ac52aa80b278bbd81871',1,'data_block']]],
+  ['block_5fsize_13',['block_size',['../d2/d2d/structfile__structs_1_1_partition_1_1_partition_header.html#a2cd1625aa362bd6175162fdc376846bd',1,'file_structs::Partition::PartitionHeader']]],
+  ['blocklength_14',['BlockLength',['../dc/da1/struct_metadata_block_header.html#a3b09f927547130bf773f72b402915a7f',1,'MetadataBlockHeader']]],
+  ['blockname_15',['BlockName',['../dc/da1/struct_metadata_block_header.html#a72e39badcad3c5db5fd002aab588cb5e',1,'MetadataBlockHeader']]],
+  ['boot_5fpartition_16',['boot_partition',['../d3/d5d/structfile__structs_1_1_auxiliary_data.html#aca4ae4cef666d90652fb2f790d3e7e98',1,'file_structs::AuxiliaryData']]],
+  ['boot_5fsector_17',['boot_sector',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#addc51e5c8ad0a376015812e06376481d',1,'file_structs::Partition::PartitionEntry']]],
+  ['boot_5fsector_5foffset_18',['boot_sector_offset',['../dc/d88/structfile__structs_1_1_partition_1_1_partition_geometry.html#a4c3c291e6c9a450e4f680cf685b355e3',1,'file_structs::Partition::PartitionGeometry']]],
+  ['bootable_19',['bootable',['../d3/d5d/structfile__structs_1_1_auxiliary_data.html#aee83a26e52b5425f6382009197735058',1,'file_structs::AuxiliaryData']]],
+  ['bootcode_20',['bootCode',['../d1/d88/struct_boot_record.html#ac30ca134f478decd2f12332d4d3d3f90',1,'BootRecord']]],
+  ['bootsectoroffset_21',['bootSectorOffset',['../d6/d1d/struct_partition.html#a939ab648ee2665ecff6fa9249c2a8b8c',1,'Partition']]],
+  ['build_22',['build',['../d9/d74/structfile__structs_1_1_reflect_version_info.html#a7ed2b4b54376211054d433581324e7d0',1,'file_structs::ReflectVersionInfo']]],
+  ['bytes_5fper_5fsector_23',['bytes_per_sector',['../da/d06/structfile__structs_1_1_disk_1_1_disk_geometry.html#ab4bb80c708ac73d4c008c409642fd88d',1,'file_structs::Disk::DiskGeometry']]]
+];

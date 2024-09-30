@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['data1_0',['data1',['../d7/de1/struct__efi__guid__t.html#abe1127adb9c1686fe2862416f1685cd5',1,'_efi_guid_t']]],
+  ['data2_1',['data2',['../d7/de1/struct__efi__guid__t.html#a023e3fcc03aab2bd43d48c0d8234873e',1,'_efi_guid_t']]],
+  ['data3_2',['data3',['../d7/de1/struct__efi__guid__t.html#ad8a5ee08d0540ebc4f44256b7c629dc8',1,'_efi_guid_t']]],
+  ['data4_3',['data4',['../d7/de1/struct__efi__guid__t.html#a73db51b64aa4412dfcb185601040c6ba',1,'_efi_guid_t']]],
+  ['data_5fblocks_4',['data_blocks',['../d1/df5/structfile__structs_1_1_partition_1_1_partition_layout.html#aa6ec57dea43178af88df6b041f4b6e2d',1,'file_structs::Partition::PartitionLayout']]],
+  ['datablock_5',['datablock',['../d5/dd5/structdelta__data__block.html#a154d5c36ffb6d467ffcf5963c7b8ff87',1,'delta_data_block']]],
+  ['delta_5fdata_5fblocks_6',['delta_data_blocks',['../d1/df5/structfile__structs_1_1_partition_1_1_partition_layout.html#a605af70609a499806419b56932d8d718',1,'file_structs::Partition::PartitionLayout']]],
+  ['delta_5findex_7',['delta_index',['../db/def/structfile__structs_1_1_header.html#a98a276ce2d7d17d59c19f5045af05be8',1,'file_structs::Header']]],
+  ['derived_5fkey_8',['derived_key',['../d3/d6d/structfile__structs_1_1_encryption.html#a21858cc8850dc3153a49f157a4ecffb0',1,'file_structs::Encryption']]],
+  ['destination_9',['destination',['../d3/d5d/structfile__structs_1_1_auxiliary_data.html#a15ccae76c9bbf7fc1c032e85c226d6bd',1,'file_structs::AuxiliaryData']]],
+  ['differential_5fretention_10',['differential_retention',['../db/de4/structfile__structs_1_1_disk_space_management.html#a116d44e94215bf1ce39cf3a7ee8f790f',1,'file_structs::DiskSpaceManagement']]],
+  ['disk_5fdescription_11',['disk_description',['../db/d34/structfile__structs_1_1_disk_1_1_disk_descriptor.html#a23d1da4e61bc42e53bd06de3c60989fa',1,'file_structs::Disk::DiskDescriptor']]],
+  ['disk_5fformat_12',['disk_format',['../d1/d3f/structfile__structs_1_1_disk_1_1_disk_header.html#ab1c3e77c78629f81c1b5f0989879df99',1,'file_structs::Disk::DiskHeader']]],
+  ['disk_5fguid_13',['disk_guid',['../da/d66/struct__gpt__header.html#a1a88350e6bdcb88a671b8b74da316a2d',1,'_gpt_header']]],
+  ['disk_5fmanufacturer_14',['disk_manufacturer',['../db/d34/structfile__structs_1_1_disk_1_1_disk_descriptor.html#ad71b53938d6383532f172cdefebe10cf',1,'file_structs::Disk::DiskDescriptor']]],
+  ['disk_5fmap_15',['disk_map',['../d3/d08/structfile__structs_1_1vi_boot.html#ae98633b3d6970df7097342ee43c34fbc',1,'file_structs::viBoot']]],
+  ['disk_5fnumber_16',['disk_number',['../d1/d3f/structfile__structs_1_1_disk_1_1_disk_header.html#af48a40f4cf517204579aa77ec73aba59',1,'file_structs::Disk::DiskHeader::disk_number'],['../d3/dd2/struct_encryption_i_v_params.html#a8a5c656031fbd6c8ff147931f2c867fd',1,'EncryptionIVParams::disk_number']]],
+  ['disk_5fproductid_17',['disk_productid',['../db/d34/structfile__structs_1_1_disk_1_1_disk_descriptor.html#a3e2f5889c0000f6c4d7cf5ce8f2866bb',1,'file_structs::Disk::DiskDescriptor']]],
+  ['disk_5frevisonno_18',['disk_revisonno',['../db/d34/structfile__structs_1_1_disk_1_1_disk_descriptor.html#a4fc87f53797aeb8a318ed4080adc0d22',1,'file_structs::Disk::DiskDescriptor']]],
+  ['disk_5fserialno_19',['disk_serialno',['../db/d34/structfile__structs_1_1_disk_1_1_disk_descriptor.html#a6f40cbbe9bddff6b0b21706b92a43b9c',1,'file_structs::Disk::DiskDescriptor']]],
+  ['disk_5fsignature_20',['disk_signature',['../d1/d3f/structfile__structs_1_1_disk_1_1_disk_header.html#af7114889d9a85017cfb1e616f0f6f87b',1,'file_structs::Disk::DiskHeader']]],
+  ['disk_5fsize_21',['disk_size',['../da/d06/structfile__structs_1_1_disk_1_1_disk_geometry.html#a56b723068e12f4539f4a410e9656bfaf',1,'file_structs::Disk::DiskGeometry']]],
+  ['disk_5fspace_5fmanagement_22',['disk_space_management',['../dc/d8d/structfile__structs_1_1_backup_definition.html#aedd58c5c798f1cc98f8915d67e6660a0',1,'file_structs::BackupDefinition']]],
+  ['disks_23',['disks',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a239b116e9c4388aa557de011a00b6a1a',1,'file_structs::BackupDefinition::disks'],['../d6/d6d/structfile__structs_1_1file_layout.html#abdb098996a0e1e33c23c1c37d40a2b90',1,'file_structs::fileLayout::disks']]],
+  ['drive_5fletter_24',['drive_letter',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#ab40885dfe3eb928803b1c91923a8c65e',1,'file_structs::Partition::FileSystem']]]
+];

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['padding_0',['Padding',['../dc/da1/struct_metadata_block_header.html#a3633b8b8ab5107ba489eea45faf12dbf',1,'MetadataBlockHeader']]],
+  ['partition_5fentry_5farray_5fcrc32_1',['partition_entry_array_crc32',['../da/d66/struct__gpt__header.html#a11f4050f8f2ba57c249ea86f1aea3b6f',1,'_gpt_header']]],
+  ['partition_5fentry_5flba_2',['partition_entry_lba',['../da/d66/struct__gpt__header.html#a6928419ce3c4c818fa8e91f7865e01e7',1,'_gpt_header']]],
+  ['partition_5ffile_5foffset_3',['partition_file_offset',['../d2/d2d/structfile__structs_1_1_partition_1_1_partition_header.html#af3fd20a383f879263d1c0ad0fa138725',1,'file_structs::Partition::PartitionHeader']]],
+  ['partition_5findex_4',['partition_index',['../d7/df1/structfile__structs_1_1_partition_1_1_file_system.html#a5150d8afc71d8f50aa0bb7c2a04e2154',1,'file_structs::Partition::FileSystem']]],
+  ['partition_5fname_5',['partition_name',['../d4/dc0/struct__gpt__entry.html#acc131dee3376de64dcc3f4bc2add8a80',1,'_gpt_entry']]],
+  ['partition_5fnumber_6',['partition_number',['../d2/d2d/structfile__structs_1_1_partition_1_1_partition_header.html#a73d0e902c201ac755016e98d3da60a06',1,'file_structs::Partition::PartitionHeader::partition_number'],['../d3/dd2/struct_encryption_i_v_params.html#a136a1cae8a3243379f53d3c06426c69f',1,'EncryptionIVParams::partition_number']]],
+  ['partition_5ftype_7',['partition_type',['../d1/d9e/structfile__structs_1_1_partition_1_1_partition_entry.html#aa71b91a48749caefc5c5e43bc5a3cf8e',1,'file_structs::Partition::PartitionEntry']]],
+  ['partition_5ftype_5fguid_8',['partition_type_guid',['../d4/dc0/struct__gpt__entry.html#a06d04c8dc3b588884cbd2a2209511fa1',1,'_gpt_entry']]],
+  ['partitionentries_9',['partitionEntries',['../d1/d88/struct_boot_record.html#ae01e3226edbbc7f60c4e5e925670a845',1,'BootRecord']]],
+  ['partitions_10',['partitions',['../d4/dcc/structfile__structs_1_1_disk_1_1_disk_layout.html#a3e197fc08a2d4cc2ffc3751d88c60018',1,'file_structs::Disk::DiskLayout::partitions'],['../de/d1d/structfile__structs_1_1bdf_disk.html#aab9ab6acfd1305b2fa19d10734af96a8',1,'file_structs::bdfDisk::partitions']]],
+  ['partitionsector_11',['partitionSector',['../d3/deb/struct_extended_partition.html#a57126bdd207e261c494293d293f42a61',1,'ExtendedPartition']]],
+  ['path_12',['path',['../df/dbc/structfile__structs_1_1bdf_folder_filters.html#a9895b6f476fa59681f9075148ebd6a6d',1,'file_structs::bdfFolderFilters']]],
+  ['period_13',['period',['../dd/d71/structfile__structs_1_1_retention.html#af0c67f1b50f33c42bcf6a281d833c8ba',1,'file_structs::Retention']]],
+  ['post_5fbackup_5fshutdown_14',['post_backup_shutdown',['../dc/d8d/structfile__structs_1_1_backup_definition.html#a88eb6a814a5ca95f88f62386439255f6',1,'file_structs::BackupDefinition']]],
+  ['prefix_5funique_15',['prefix_unique',['../dc/d8d/structfile__structs_1_1_backup_definition.html#af1060e185cc07a6972f39a5750804e47',1,'file_structs::BackupDefinition']]]
+];
