@@ -1,0 +1,201 @@
+{
+    "_auxiliary_data": {
+        "backup_definition": {
+            "auto_verify": false,
+            "backup_definition_file": "",
+            "backup_format": "partition",
+            "check_filesystem": false,
+            "comment": "",
+            "compression_level": "medium",
+            "consolidation_type": "none",
+            "cpu_priority": "below_normal",
+            "disk_space_management": {
+                "apply_to_all_sets_in_folder": false,
+                "differential_retention": {
+                    "enable": true,
+                    "interval": 4,
+                    "period": "count"
+                },
+                "full_retention": {
+                    "enable": true,
+                    "interval": 13,
+                    "period": "count"
+                },
+                "incremental_retention": {
+                    "enable": true,
+                    "interval": 10,
+                    "period": "count"
+                },
+                "incrementals_forever": false,
+                "low_space_gb_threshold": 5,
+                "low_space_purge": true,
+                "run_before": true
+            },
+            "disks": [
+                {
+                    "number": 4,
+                    "partitions": [
+                        1
+                    ],
+                    "signature": "5D4001D3-7B31-4300-BED8-48C82AF9DE24"
+                }
+            ],
+            "email": {
+                "failure_attach_log": false,
+                "failure_attach_vss_log": false,
+                "failure_content": "",
+                "failure_enable": false,
+                "failure_include_cancelled": false,
+                "failure_include_skipped": true,
+                "failure_recipients": "",
+                "failure_subject": "",
+                "success_attach_log": false,
+                "success_attach_vss_log": false,
+                "success_content": "",
+                "success_enable": false,
+                "success_recipients": "",
+                "success_subject": "",
+                "warning_attach_log": false,
+                "warning_attach_vss_log": false,
+                "warning_content": "",
+                "warning_enable": false,
+                "warning_recipients": "",
+                "warning_subject": ""
+            },
+            "file_type": "image",
+            "filename": "B:\\vx\\D684BA87241263E2-demo-00-00.mrimg",
+            "filename_template": "demo",
+            "intelligent_sector_copy": true,
+            "limit_file_size": false,
+            "post_backup_shutdown": {
+                "enable": false
+            },
+            "prefix_unique": true,
+            "rate_limit": 20000
+        },
+        "bootable": false,
+        "destination": "B:\\vx\\D684BA87241263E2-demo-00-00.mrimg",
+        "highest_file_offset": 0,
+        "macrium_reflect": {
+            "build": 7919,
+            "file_version": 10,
+            "major": 10,
+            "minor": 0
+        },
+        "target_drive_type": "local",
+        "third_party_software_version_list": [
+            {
+                "name_and_version": "OpenSSL 3.1.3"
+            },
+            {
+                "name_and_version": "nlohmann json 3.11.3"
+            },
+            {
+                "name_and_version": "Zstd 1.5.5"
+            }
+        ],        
+        "unique_prefix_type": "imageid"
+    },
+    "_compression": {
+        "compression_level": "medium",
+        "compression_method": "zstd"
+    },
+    "_encryption": {
+        "enable": false,
+        "key_iterations": 0
+    },
+    "_header": {
+        "backup_format": "partition",
+        "backup_guid": "f4487e0d-cdb5-483d-9757-12c514ace5a0",
+        "backup_time": 1713104325,
+        "backup_type": "full",
+        "backupset_time": 1713104325,
+        "delta_index": false,
+        "file_number": 0,
+        "imaged_disks_count": 1,
+        "imageid": "D684BA87241263E2",
+        "increment_number": 0,
+        "index_file_position": 1294336,
+        "json_version": 1,
+        "netbios_name": "MS-W-0",
+        "split_file": false
+    },
+    "disks": [
+        {
+            "_descriptor": {
+                "disk_description": "Msft     Virtual Disk     1.0",
+                "disk_manufacturer": "Msft    ",
+                "disk_productid": "Virtual Disk    ",
+                "disk_revisonno": "1.0 ",
+                "disk_serialno": ""
+            },
+            "_geometry": {
+                "bytes_per_sector": 512,
+                "cylinders": 15665,
+                "disk_size": 128849018880,
+                "media_type": "fixed_media",
+                "sectors_per_track": 63,
+                "tracks_per_cylinder": 255
+            },
+            "_header": {
+                "disk_format": "gpt",
+                "disk_number": 4,
+                "disk_signature": "5D4001D3-7B31-4300-BED8-48C82AF9DE24",
+                "imaged_partition_count": 1
+            },
+            "partitions": [
+                {
+                    "_file_system": {
+                        "bitlocker_state": "none",
+                        "drive_letter": 72,
+                        "end": 128846921727,
+                        "free_clusters": 31428909,
+                        "lcn0_file_number": 0,
+                        "lcn0_offset": 16777216,
+                        "mft_offset": 3238002688,
+                        "mft_record_size": 1024,
+                        "partition_index": 1,
+                        "sectors_per_cluster": 8,
+                        "shadow_copy": "\\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy5",
+                        "start": 16777216,
+                        "total_clusters": 31452672,
+                        "type": "NTFS",
+                        "volume_guid": "\\??\\Volume{28e8f8e1-94e4-49dd-a54b-4babc99677dd}",
+                        "volume_label": "Demo"
+                    },
+                    "_geometry": {
+                        "boot_sector_offset": 0,
+                        "end": 128846921727,
+                        "length": 128830144512,
+                        "start": 16777216
+                    },
+                    "_header": {
+                        "block_count": 1965792,
+                        "block_size": 65536,
+                        "file_history": [
+                            {
+                                "file_name": "B:\\vx\\D684BA87241263E2-demo-00-00.mrimg",
+                                "file_number": 0
+                            }
+                        ],
+                        "file_history_count": 1,
+                        "partition_file_offset": 0,
+                        "partition_number": 1
+                    },
+                    "_partition_table_entry": {
+                        "active": false,
+                        "boot_sector": 32768,
+                        "end_cylinder": 0,
+                        "end_head": 0,
+                        "num_sectors": 251621376,
+                        "partition_type": "primary",
+                        "start_cylinder": 0,
+                        "start_head": 0,
+                        "status": 0,
+                        "type": 7
+                    }
+                }
+            ]
+        }
+    ]
+}

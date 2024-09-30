@@ -1,0 +1,178 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Schema for Macrium Reflect image file JSON data. This only the includes json nodes required for reading and restoring file system data",
+    "type": "object",
+    "properties": {
+        "_compression": {
+            "type": "object",
+            "description": "Compression-related information",
+            "properties": {
+                "compression_level": {
+                    "type": "string",
+                    "description": "Level of compression",
+                    "enum": ["none", "medium", "high"]
+                }
+            },
+            "required": ["compression_level"]
+        },
+        "_encryption": {
+            "type": "object",
+            "description": "Encryption-related information",
+            "properties": {
+                "aes_type": {
+                    "type": "string",
+                    "description": "Type of AES encryption used",
+                    "enum": ["none", "aes-128", "aes-192", "aes-256"]
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "Whether encryption is enabled"
+                },
+                "key_iterations": {
+                    "type": "integer",
+                    "description": "Number of iterations for key derivation"
+                },
+                "hmac": {
+                    "type": "string",
+                    "description": "HMAC value"
+                }
+            },
+            "required": ["aes_type", "enable", "key_iterations", "hmac"]
+        },
+        "_header": {
+            "type": "object",
+            "description": "Header information for the backup",
+            "properties": {
+                "delta_index": {
+                    "type": "boolean",
+                    "description": "Whether delta indexing is used"
+                },
+                "file_number": {
+                    "type": "integer",
+                    "description": "File sequence number in the backup set"
+                },
+                "imageid": {
+                    "type": "string",
+                    "description": "Unique backup set identifier"
+                },
+                "increment_number": {
+                    "type": "integer",
+                    "description": "Increment number for this backup"
+                },
+                "index_file_position": {
+                    "type": "integer",
+                    "description": "The file position for the beginning of the backup metadata, including all block indexes"
+                },
+                "merged_files": {
+                    "type": "array",
+                    "description": "List of merged file numbers due to consolidation/retention rules",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "split_file": {
+                    "type": "boolean",
+                    "description": "Whether the backup is a split file. If true then a subsequent file contains the block indexes"
+                }
+            },
+            "required": ["delta_index", "file_number", "imageid", "increment_number", "index_file_position", "merged_files", "split_file"]
+        },
+        "disks": {
+            "type": "array",
+            "description": "List of disks included in the backup",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_geometry": {
+                        "type": "object",
+                        "description": "Disk geometry information",
+                        "properties": {
+                            "bytes_per_sector": {
+                                "type": "integer",
+                                "description": "Number of bytes per sector"
+                            },
+                            "disk_size": {
+                                "type": "integer",
+                                "description": "Total disk size in bytes"
+                            }
+                        },
+                        "required": ["bytes_per_sector", "disk_size"]
+                    },
+                    "_header": {
+                        "type": "object",
+                        "description": "Disk header information",
+                        "properties": {
+                            "disk_format": {
+                                "type": "string",
+                                "description": "Format of the disk",
+                                "enum": ["gpt", "mbr"]
+                            },
+                            "disk_number": {
+                                "type": "integer",
+                                "description": "Disk number in the system"
+                            }
+                        },
+                        "required": ["disk_format", "disk_number"]
+                    },
+                    "partitions": {
+                        "type": "array",
+                        "description": "List of partitions on the disk",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_file_system": {
+                                    "type": "object",
+                                    "description": "File system information for the partition",
+                                    "properties": {
+                                        "lcn0_offset": {
+                                            "type": "integer",
+                                            "description": "Offset at the first logical cluster number (LCN)"
+                                        },
+                                        "reserved_sectors_byte_length": {
+                                            "type": "integer",
+                                            "description": "Byte length of reserved sectors"
+                                        }
+                                    },
+                                    "required": ["lcn0_offset", "reserved_sectors_byte_length"]
+                                },
+                                "_geometry": {
+                                    "type": "object",
+                                    "description": "Geometry information of the partition",
+                                    "properties": {
+                                        "boot_sector_offset": {
+                                            "type": "integer",
+                                            "description": "Offset of the boot sector"
+                                        },
+                                        "start": {
+                                            "type": "integer",
+                                            "description": "Starting sector of the partition"
+                                        }
+                                    },
+                                    "required": ["start", "boot_sector_offset"]
+                                },
+                                "_header": {
+                                    "type": "object",
+                                    "description": "Partition header information",
+                                    "properties": {
+                                        "block_size": {
+                                            "type": "integer",
+                                            "description": "Size of blocks in the partition"
+                                        },
+                                        "partition_number": {
+                                            "type": "integer",
+                                            "description": "Partition number"
+                                        }
+                                    },
+                                    "required": ["block_size", "partition_number"]
+                                }
+                            },
+                            "required": ["_file_system", "_geometry", "_header"]
+                        }
+                    }
+                },
+                "required": ["_geometry", "_header", "partitions"]
+            }
+        }
+    },
+    "required": ["_compression", "_encryption", "_header", "disks"]
+}

@@ -19,7 +19,6 @@
 /src/out/build/x64-debug/CMakeFiles
 /src/out/build/x64-debug/CMakeCache.txt
 /src/out/build/x64-debug/VSInheritEnvironments.txt
-*.json
 /src/out/build/x64-debug/Testing/Temporary
 /src/out/build/x64-debug/img_to_vhdx/CMakeFiles/img_to_vhdx.dir
 /src/out/build/x64-debug/libs/encryption/CMakeFiles/encryption.dir

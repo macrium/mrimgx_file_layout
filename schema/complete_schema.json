@@ -1,0 +1,824 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Schema for Macrium Reflect image file JSON data, including additional nodes for comprehensive validation.",
+    "type": "object",
+    "properties": {
+        "_auxiliary_data": {
+            "type": "object",
+            "description": "Backup configuration and information not required for data access or restore",
+            "properties": {
+                "backup_definition": {
+                    "type": "object",
+                    "description": "Backup definition details",
+                    "properties": {
+                        "alternative_locations": {
+                            "type": "array",
+                            "description": "List of alternative backup locations. Each location is tried in sequence if the primary location is unavailable",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "auto_verify": {
+                            "type": "boolean",
+                            "description": "Whether to automatically verify backup after completion"
+                        },
+                        "backup_definition_file": {
+                            "type": "string",
+                            "description": "Path to the backup definition file"
+                        },
+                        "backup_format": {
+                            "type": "string",
+                            "description": "Format of the backup",
+                            "enum": ["partition", "file_and_folder"]
+                        },
+                        "check_filesystem": {
+                            "type": "boolean",
+                            "description": "Whether to check the filesystem as part of the backup process"
+                        },
+                        "comment": {
+                            "type": "string",
+                            "description": "User comment about the backup"
+                        },
+                        "compression_level": {
+                            "type": "string",
+                            "description": "Level of compression",
+                            "enum": ["none", "medium", "high"]
+                        },
+                        "consolidation_type": {
+                            "type": "string",
+                            "description": "Type of consolidation. Merge into the full image (synthetic full), or merge into the last incremental (incremental_merge)",
+                            "enum": ["synthetic_full", "incremental_merge"]
+                        },
+                        "cpu_priority": {
+                            "type": "string",
+                            "description": "CPU priority for the backup process",
+                            "enum": ["idle", "below_normal", "normal", "above_normal"]
+                        },
+                        "disks": {
+                            "description": "List of disks with their partitions",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "number": {
+                                        "description": "Disk number",
+                                        "type": "integer"
+                                    },
+                                    "partitions": {
+                                        "description": "List of partition numbers on the disk",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "signature": {
+                                        "description": "Unique identifier for the disk",
+                                        "type": "string",
+                                        "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+                                    }
+                                },
+                                "required": ["number", "partitions", "signature"]
+                            }
+                        },
+                        "disk_space_management": {
+                            "type": "object",
+                            "description": "Disk space management settings",
+                            "properties": {
+                                "apply_to_all_sets_in_folder": {
+                                    "type": "boolean",
+                                    "description": "Whether to apply disk space management settings to all sets in the folder or only matching sets"
+                                },
+                                "differential_retention": {
+                                    "type": "object",
+                                    "description": "Retention settings for differential backups",
+                                    "properties": {
+                                        "enable": {
+                                            "type": "boolean",
+                                            "description": "Whether retention is enabled for differential backups"
+                                        },
+                                        "interval": {
+                                            "type": "integer",
+                                            "description": "Interval for differential retention"
+                                        },
+                                        "period": {
+                                            "type": "string",
+                                            "description": "Period type for differential retention",
+                                            "enum": ["count", "days", "weeks"]
+                                        }
+                                    }
+                                },
+                                "full_retention": {
+                                    "type": "object",
+                                    "description": "Retention settings for full backups",
+                                    "properties": {
+                                        "enable": {
+                                            "type": "boolean",
+                                            "description": "Whether retention is enabled for full backups"
+                                        },
+                                        "interval": {
+                                            "type": "integer",
+                                            "description": "Interval for full retention"
+                                        },
+                                        "period": {
+                                            "type": "string",
+                                            "description": "Period type for full retention",
+                                            "enum": ["count", "days", "weeks"]
+                                        }
+                                    }
+                                },
+                                "incremental_retention": {
+
+
+                                    "type": "object",
+                                    "description": "Retention settings for incremental backups",
+                                    "properties": {
+                                        "enable": {
+                                            "type": "boolean",
+                                            "description": "Whether retention is enabled for incremental backups"
+                                        },
+                                        "interval": {
+                                            "type": "integer",
+                                            "description": "Interval for incremental retention"
+                                        },
+                                        "period": {
+                                            "type": "string",
+                                            "description": "Period type for incremental retention",
+                                            "enum": ["count", "days", "weeks"]
+                                        }
+                                    }
+                                },
+                                "incrementals_forever": {
+                                    "type": "boolean",
+                                    "description": "Whether 'incrementals forever'/'synthetic_full' is enabled."
+                                },
+                                "low_space_gb_threshold": {
+                                    "type": "integer",
+                                    "description": "Threshold in GB for low space backup set purge"
+                                },
+                                "low_space_purge": {
+                                    "type": "boolean",
+                                    "description": "Whether to purge old backups on low space"
+                                },
+                                "run_before": {
+                                    "type": "boolean",
+                                    "description": "Whether disk space management should run before the backup or after"
+                                }
+                            }
+                        },
+                        "email": {
+                            "type": "object",
+                            "description": "Email notification settings",
+                            "properties": {
+                                "failure_attach_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach log on failure"
+                                },
+                                "failure_attach_vss_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach VSS log on failure"
+                                },
+                                "failure_content": {
+                                    "type": "string",
+                                    "description": "Content of failure notification email"
+                                },
+                                "failure_enable": {
+                                    "type": "boolean",
+                                    "description": "Whether failure notifications are enabled"
+                                },
+                                "failure_include_cancelled": {
+                                    "type": "boolean",
+                                    "description": "Whether to include cancelled backups in failure notifications"
+                                },
+                                "failure_include_skipped": {
+                                    "type": "boolean",
+                                    "description": "Whether to include skipped backups in failure notifications"
+                                },
+                                "failure_recipients": {
+                                    "type": "string",
+                                    "description": "Recipients of failure notification emails"
+                                },
+                                "failure_subject": {
+                                    "type": "string",
+                                    "description": "Subject of failure notification emails"
+                                },
+                                "success_attach_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach log on success"
+                                },
+                                "success_attach_vss_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach VSS log on success"
+                                },
+                                "success_content": {
+                                    "type": "string",
+                                    "description": "Content of success notification email"
+                                },
+                                "success_enable": {
+                                    "type": "boolean",
+                                    "description": "Whether success notifications are enabled"
+                                },
+                                "success_recipients": {
+                                    "type": "string",
+                                    "description": "Recipients of success notification emails"
+                                },
+                                "success_subject": {
+                                    "type": "string",
+                                    "description": "Subject of success notification emails"
+                                },
+                                "warning_attach_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach log on warning"
+                                },
+                                "warning_attach_vss_log": {
+                                    "type": "boolean",
+                                    "description": "Whether to attach VSS log on warning"
+                                },
+                                "warning_content": {
+                                    "type": "string",
+                                    "description": "Content of warning notification email"
+                                },
+                                "warning_enable": {
+                                    "type": "boolean",
+                                    "description": "Whether warning notifications are enabled"
+                                },
+                                "warning_recipients": {
+                                    "type": "string",
+                                    "description": "Recipients of warning notification emails"
+                                },
+                                "warning_subject": {
+                                    "type": "string",
+                                    "description": "Subject of warning notification emails"
+                                }
+                            }
+                        },
+                        "file_and_folder": {
+                            "type": "object",
+                            "description": "File and folder backup settings",
+                            "properties": {
+                                "backup_ntfs_permissions": {
+                                    "type": "boolean",
+                                    "description": "Whether to backup NTFS permissions"
+                                },
+                                "folder_filters": {
+                                    "type": "array",
+                                    "description": "Defines filters for folders, specifying which files and folders should be included or excluded.",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "exclude_files": {
+                                                "type": "string",
+                                                "description": "Semicolon-separated list of file patterns to exclude (e.g., '*.temp; *.tmp; *.bak; *.~*')."
+                                            },
+                                            "exclude_folders": {
+                                                "type": "string",
+                                                "description": "Semicolon-separated list of folder names to exclude. Empty string indicates no folders are excluded."
+                                            },
+                                            "exclude_hidden_files": {
+                                                "type": "boolean",
+                                                "description": "Whether to exclude hidden files from the backup."
+                                            },
+                                            "exclude_system_files": {
+                                                "type": "boolean",
+                                                "description": "Whether to exclude system files from the backup."
+                                            },
+                                            "include_files": {
+                                                "type": "string",
+                                                "description": "Semicolon-separated list of file patterns to include (e.g., '*.*' to include all files)."
+                                            },
+                                            "include_folders": {
+                                                "type": "string",
+                                                "description": "Semicolon-separated list of folder names to include. Empty string indicates all folders are included if they don't match exclusion criteria."
+                                            },
+                                            "is_folder_source": {
+                                                "type": "boolean",
+                                                "description": "Indicates whether the path specified is a folder source."
+                                            },
+                                            "is_recursive": {
+                                                "type": "boolean",
+                                                "description": "Indicates whether the inclusion or exclusion is applied recursively to all subfolders."
+                                            },
+                                            "path": {
+                                                "type": "string",
+                                                "description": "The path to the folder the filters apply to."
+                                            }
+                                        }
+                                    }
+                                },
+                                "follow_system_junction_points": {
+                                    "type": "boolean",
+                                    "description": "Whether to follow system junction points"
+                                },
+                                "follow_user_junction_points": {
+                                    "type": "boolean",
+                                    "description": "Whether to follow user junction points"
+                                },
+                                "match_type": {
+                                    "type": "string",
+                                    "description": "Type of match for backup. 'any' - Match on any backup, 'strict' - Match on backups with the same folders and filters, 'single_match' - Match on backups with at least one matching folder",
+                                    "enum": ["any", "strict", "single_match"]
+                                }
+                            }
+                        },
+                        "file_size_limit": {
+                            "type": "integer",
+                            "description": "Maximum file size limit. Split backup files when the limit is exceeded"
+                        },
+                        "file_type": {
+                            "type": "string",
+                            "description": "Type of backup file. (.mrimg, .mrbak)",
+                            "enum": ["image", "file_and_folder"]
+                        },
+                        "filename": {
+                            "type": "string",
+                            "description": "Filename for the backup"
+                        },
+                        "filename_template": {
+                            "type": "string",
+                            "description": "Template for generating backup filenames"
+                        },
+                        "intelligent_sector_copy": {
+                            "type": "boolean",
+                            "description": "Whether intelligent sector copy is enabled"
+                        },
+                        "limit_file_size": {
+                            "type": "boolean",
+                            "description": "Whether to limit the file size"
+                        },
+                        "post_backup_shutdown": {
+                            "type": "object",
+                            "description": "Settings for shutdown after backup",
+                            "properties": {
+                                "enable": {
+                                    "type": "boolean",
+                                    "description": "Whether to enable post backup shutdown"
+                                },
+                                "force": {
+                                    "type": "boolean",
+                                    "description": "Whether to force shutdown"
+                                },
+                                "level": {
+                                    "type": "string",
+                                    "description": "Shutdown level",
+                                    "enum": ["none", "shutdown", "hibernate", "suspend", "reboot"]
+                                }
+                            }
+                        },
+                        "prefix_unique": {
+                            "type": "boolean",
+                            "description": "Whether the prefix is unique"
+                        },
+                        "rate_limit": {
+                            "type": "integer",
+                            "description": "Rate limit for the backup process"
+                        },
+                        "site_manager_cookie": {
+                            "type": "string",
+                            "description": "A cookie value used by images created with macrium site manager."
+                        },
+                        "viboot": {
+                            "description": "viboot configuration",
+                            "type": "object",
+                            "properties": {
+                                "disk_map": {
+                                    "description": "Mapping of disks in viboot",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "boot_partition": {
+                    "type": "string",
+                    "description": "Boot partition identifier"
+                },
+                "bootable": {
+                    "type": "boolean",
+                    "description": "Whether the backup is bootable"
+                },
+                "collision_number": {
+                    "type": "integer",
+                    "description": "Collision number"
+                },
+                "destination": {
+                    "type": "string",
+                    "description": "Destination path for the backup"
+                },
+                "highest_file_offset": {
+                    "type": "integer",
+                    "description": "Highest file offset in the backup"
+                },
+                "macrium_reflect": {
+                  "type":         "object",
+                  "description":         "Macrium Reflect settings",
+                  "properties": {
+                    "build": {
+                      "type":         "integer",
+                      "description":         "Macrium Reflect build number"
+                    },
+                    "file_version": {
+                      "type":         "integer",
+                      "description":         "Macrium Reflect file version"
+                    },
+                    "major": {
+                      "type":         "integer",
+                      "description":         "Macrium Reflect major version"
+                    },
+                    "minor": {
+                      "type":         "integer",
+                      "description":         "Macrium Reflect minor version"
+                    }
+                  }
+                },
+                "system_partition": {
+                    "type": "string",
+                    "description": "System partition identifier"
+                },
+                "target_drive_type": {
+                    "type": "string",
+                    "description": "Type of target drive",
+                    "enum": ["local", "network", "usb"]
+                },
+                "third_party_software_version_list": {
+                  "type": "array",
+                  "description": "List of third-party software versions",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name_and_version": {
+                        "type": "string",
+                        "description": "Name and version of third-party software"
+                      }
+                    }
+                  }
+                },                
+                "unique_prefix_type": {
+                    "type": "string",
+                    "description": "Type of unique prefix used",
+                    "enum": ["imageid", "timestamp", "custom"]
+                }
+            }
+        },
+        "_compression": {
+            "type": "object",
+            "description": "Compression-related information",
+            "properties": {
+                "compression_level": {
+                    "type": "string",
+                    "description": "Level of compression",
+                    "enum": ["none", "medium", "high"]
+                },
+                "compression_method": {
+                    "type": "string",
+                    "description": "Method of compression",
+                    "enum": ["zstd"]
+                }
+            },
+            "required": ["compression_level"]
+        },
+        "_encryption": {
+            "type": "object",
+            "description": "Encryption-related information",
+            "properties": {
+                "aes_type": {
+                    "type": "string",
+                    "description": "Type of AES encryption used",
+                    "enum": ["none", "aes-128", "aes-192", "aes-256"]
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "Whether encryption is enabled"
+                },
+                "hmac": {
+                    "type": "string",
+                    "description": "HMAC value"
+                },
+                "key_derivation": {
+                    "type": "string",
+                    "description": "Key derivation method used",
+                    "enum": ["pbkdf2"]
+                },
+                "key_iterations": {
+                    "type": "integer",
+                    "description": "Number of iterations for key derivation"
+                }
+            },
+            "required": ["aes_type", "enable", "key_iterations", "hmac"]
+        },
+        "_header": {
+            "type": "object",
+            "description": "Header information for the backup",
+            "properties": {
+                "backup_format": {
+                    "type": "string",
+                    "description": "Format of the backup",
+                    "enum": ["partition", "file_and_folder"]
+                },
+                "backup_type": {
+                    "type": "string",
+                    "description": "Type of the backup",
+                    "enum": ["full", "diff", "inc"]
+                },
+                "backup_guid": {
+                    "type": "string",
+                    "description": "Unique GUID for the backup"
+                },
+                "backup_time": {
+                    "type": "integer",
+                    "description": "__time64_t timestamp for when the backup was taken"
+                },
+                "backupset_time": {
+                    "type": "integer",
+                    "description": "__time64_t timestamp for the full backup in the set"
+                },
+                "delta_index": {
+                    "type": "boolean",
+                    "description": "Whether delta indexing is used"
+                },
+                "file_number": {
+                    "type": "integer",
+                    "description": "File sequence number in the backup set"
+                },
+                "imaged_disks_count": {
+                    "type": "integer",
+                    "description": "Count of imaged disks"
+                },
+                "imageid": {
+                    "type": "string",
+                    "description": "Unique backup set identifier"
+                },
+                "increment_number": {
+                    "type": "integer",
+                    "description": "Increment number for this backup"
+                },
+                "index_file_position": {
+                    "type": "integer",
+                    "description": "The file position for the beginning of the backup metadata, including all block indexes"
+                },
+                "json_version": {
+                    "type": "integer",
+                    "description": "Version number for this JSON schema"
+                },
+                "merged_files": {
+                    "type": "array",
+                    "description": "List of merged file numbers due to consolidation/retention rules",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "netbios_name": {
+                    "type": "string",
+                    "description": "NetBIOS name of the system"
+                },
+                "split_file": {
+                    "type": "boolean",
+                    "description": "Whether the backup is a split file. If true then a subsequent file contains the block indexes"
+                }
+            },
+            "required": ["delta_index", "file_number", "imageid", "increment_number", "index_file_position", "merged_files", "split_file"]
+        },
+        "disks": {
+            "type": "array",
+            "description": "List of disks included in the backup",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_descriptor": {
+                        "type": "object",
+                        "description": "Disk descriptor information",
+                        "properties": {
+                            "disk_description": {
+                                "type": "string",
+                                "description": "Description of the disk"
+                            },
+                            "disk_manufacturer": {
+                                "type": "string",
+                                "description": "Disk manufacturer"
+                            },
+                            "disk_productid": {
+                                "type": "string",
+                                "description": "Disk product ID"
+                            },
+                            "disk_revisonno": {
+                                "type": "string",
+                                "description": "Disk revision number"
+                            },
+                            "disk_serialno": {
+                                "type": "string",
+                                "description": "Disk serial number"
+                            }
+                        }
+                    },
+                    "_geometry": {
+                        "type": "object",
+                        "description": "Disk geometry information",
+                        "properties": {
+                            "bytes_per_sector": {
+                                "type": "integer",
+                                "description": "Number of bytes per sector"
+                            },
+                            "cylinders": {
+                                "type": "integer",
+                                "description": "Number of cylinders on the disk"
+                            },
+                            "disk_size": {
+                                "type": "integer",
+                                "description": "Total disk size in bytes"
+                            },
+                            "media_type": {
+                                "type": "string",
+                                "description": "Type of media",
+                                "enum": ["fixed_media", "removable_media"]
+                            },
+                            "sectors_per_track": {
+                                "type": "integer",
+                                "description": "Number of sectors per track"
+                            },
+                            "tracks_per_cylinder": {
+                                "type": "integer",
+                                "description": "Number of tracks per cylinder"
+                            }
+                        },
+                        "required": ["bytes_per_sector", "disk_size"]
+                    },
+                    "_header": {
+                        "type": "object",
+                        "description": "Disk header information",
+                        "properties": {
+                            "disk_format": {
+                                "type": "string",
+                                "description": "Format of the disk",
+                                "enum": ["gpt", "mbr"]
+                            },
+                            "disk_number": {
+                                "type": "integer",
+                                "description": "Disk number in the system"
+                            },
+                            "disk_signature": {
+                                "type": "string",
+                                "description": "Unique disk signature"
+                            },
+                            "extended_partition_count": {
+                                "type": "integer",
+                                "description": "Count of extended partitions"
+                            },
+                            "extended_partition_sector_offset": {
+                                "type": "integer",
+                                "description": "Sector offset for extended partitions"
+                            },
+                            "imaged_partition_count": {
+                                "type": "integer",
+                                "description": "Count of imaged partitions"
+                            }
+                        },
+                        "required": ["disk_format", "disk_number"]
+                    },
+                    "partitions": {
+                        "type": "array",
+                        "description": "List of partitions on the disk",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_file_system": {
+                                    "type": "object",
+                                    "description": "File system information for the partition",
+                                    "properties": {
+                                        "bitlocker_state": {
+                                            "type": "string",
+                                            "description": "BitLocker state of the partition",
+                                            "enum": ["none", "encrypted", "decrypted"]
+                                        },
+                                        "drive_letter": {
+                                            "type": "integer",
+                                            "description": "Drive letter assigned to the partition"
+                                        },
+                                        "end": {
+                                            "type": "integer",
+                                            "description": "Ending sector of the partition"
+                                        },
+                                        "fat_offset": {
+                                            "type": "integer",
+                                            "description": "Offset for FAT file systems"
+                                        },
+                                        "free_clusters": {
+                                            "type": "integer",
+                                            "description": "Number of free clusters"
+                                        },
+                                        "lcn0_file_number": {
+                                            "type": "integer",
+                                            "description": "File number at the first logical cluster number (LCN)"
+                                        },
+                                        "lcn0_offset": {
+                                            "type": "integer",
+                                            "description": "Offset at the first logical cluster number (LCN)"
+                                        },
+                                        "linux_blocks_per_group": {
+                                            "type": "integer",
+                                            "description": "Number of blocks per group in Linux file systems"
+                                        },
+                                        "linux_group_count": {
+                                            "type": "integer",
+                                            "description": "Number of groups in Linux file systems"
+                                        },
+                                        "mft_offset": {
+                                            "type": "integer",
+                                            "description": "Offset for the Master File Table (MFT)"
+                                        },
+                                        "mft_record_size": {
+                                            "type": "integer",
+                                            "description": "Size of MFT records"
+                                        },
+                                        "partition_index": {
+                                            "type": "integer",
+                                            "description": "Index of the partition"
+                                        },
+                                        "reserved_sectors_byte_length": {
+                                            "type": "integer",
+                                            "description": "Byte length of reserved sectors"
+                                        },
+                                        "sectors_per_cluster": {
+                                            "type": "integer",
+                                            "description": "Number of sectors per cluster"
+                                        },
+                                        "shadow_copy": {
+                                            "type": "string",
+                                            "description": "Shadow copy information"
+                                        },
+                                        "start": {
+                                            "type": "integer",
+                                            "description": "Starting sector of the partition"
+                                        },
+                                        "total_clusters": {
+                                            "type": "integer",
+                                            "description": "Total number of clusters in the partition"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "description": "File system type",
+                                            "enum": ["NTFS", "FAT32", "exFAT", "EXT4", "HFS+"]
+                                        },
+                                        "volume_guid": {
+                                            "type": "string",
+                                            "description": "GUID of the volume"
+                                        },
+                                        "volume_label": {
+                                            "type": "string",
+                                            "description": "Label of the volume"
+                                        }
+                                    },
+                                    "required": ["lcn0_offset", "reserved_sectors_byte_length"]
+                                },
+                                "_geometry": {
+                                    "type": "object",
+                                    "description": "Geometry information of the partition",
+                                    "properties": {
+                                        "boot_sector_offset": {
+                                            "type": "integer",
+                                            "description": "Offset of the boot sector"
+                                        },
+                                        "end": {
+                                            "type": "integer",
+                                            "description": "Ending sector of the partition"
+                                        },
+                                        "length": {
+                                            "type": "integer",
+                                            "description": "Length of the partition in bytes"
+                                        },
+                                        "start": {
+                                            "type": "integer",
+                                            "description": "Starting sector of the partition"
+                                        }
+                                    },
+                                    "required": ["start", "boot_sector_offset"]
+                                },
+                                "_header": {
+                                    "type": "object",
+                                    "description": "Partition header information",
+                                    "properties": {
+                                        "block_size": {
+                                            "type": "integer",
+                                            "description": "Size of blocks in the partition"
+                                        },
+                                        "partition_number": {
+                                            "type": "integer",
+                                            "description": "Partition number"
+                                        }
+                                    },
+                                    "required": ["block_size", "partition_number"]
+                                }
+                            },
+                            "required": ["_file_system", "_geometry", "_header"]
+                        }
+                    }
+                },
+                "required": ["_geometry", "_header", "partitions"]
+            }
+        }
+    },
+    "required": ["_compression", "_encryption", "_header", "disks"]
+}
