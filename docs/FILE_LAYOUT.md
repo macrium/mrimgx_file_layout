@@ -9,7 +9,7 @@
 > This layout is not valid for Image Files created with Macrium Reflect v8.x or earlier.
 ***
 ### Overview
-The data layout in an image file is similar to that on a physical disk, including disk format, partitions, and file systems. The following digram shows how a single disk directly maps to a full disk image. 
+The data layout in an image file is similar to that on a physical disk, including disk format, partitions, and file systems. The following diagram shows how a single disk directly maps to a full disk image. 
 
 
 ![FILE LAYOUT](../assets/mrimgx-layout.png)
