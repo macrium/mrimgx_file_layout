@@ -18,7 +18,7 @@ The following diagram shows how multiple disks map to a full disk image. The dis
 
 ![FILE LAYOUT](../assets/mrimgx-layout-2-disks.png)
 
-Incremental image files contain only data blocks that are different from the prevous image in the backup set. Differential image files contain only data blocks that are different from the full image in the backup set.
+Incremental image files contain only data blocks that are different from the previous image in the backup set. Differential image files contain only data blocks that are different from the full image in the backup set.
 > [!NOTE]
 > Consolidated images may contain data blocks out of sequence and optimized for storage efficiency. All consolidated data bolcks are positioned prior to the metadata at the end of the file.
 
