@@ -9,7 +9,7 @@
 > This layout is not valid for Image Files created with Macrium Reflect v8.x or earlier.
 ***
 ### Overview
-The data layout in an image file is similar to that on a physical disk, including disk format, partitions, and file systems. The following digram shows how a single disk directly maps to a full disk image. 
+The data layout in an image file is similar to that on a physical disk, including disk format, partitions, and file systems. The following diagram shows how a single disk directly maps to a full disk image. 
 
 
 ![FILE LAYOUT](../assets/mrimgx-layout.png)
@@ -18,9 +18,9 @@ The following diagram shows how multiple disks map to a full disk image. The dis
 
 ![FILE LAYOUT](../assets/mrimgx-layout-2-disks.png)
 
-Incremental image files contain only data blocks that are different from the prevous image in the backup set. Differential image files contain only data blocks that are different from the full image in the backup set.
+Incremental image files contain only data blocks that are different from the previous image in the backup set. Differential image files contain only data blocks that are different from the full image in the backup set.
 > [!NOTE]
-> Consolidated images may contain data blocks out of sequence and optimized for storage efficiency. All consolidated data bolcks are positioned prior to the metadata at the end of the file.
+> Consolidated images may contain data blocks out of sequence and optimized for storage efficiency. All consolidated data blocks are positioned prior to the metadata at the end of the file.
 
 ### Special considerations for FAT File Systems
 FAT file systems, including FAT32/16/12, are managed differently within image files because of Reserved Sectors preceding the file system data. These reserved sectors comprise the Boot Sector, followed by up to 2 copies of the File Allocation Table (FAT).
