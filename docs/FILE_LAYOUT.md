@@ -20,7 +20,7 @@ The following diagram shows how multiple disks map to a full disk image. The dis
 
 Incremental image files contain only data blocks that are different from the previous image in the backup set. Differential image files contain only data blocks that are different from the full image in the backup set.
 > [!NOTE]
-> Consolidated images may contain data blocks out of sequence and optimized for storage efficiency. All consolidated data bolcks are positioned prior to the metadata at the end of the file.
+> Consolidated images may contain data blocks out of sequence and optimized for storage efficiency. All consolidated data blocks are positioned prior to the metadata at the end of the file.
 
 ### Special considerations for FAT File Systems
 FAT file systems, including FAT32/16/12, are managed differently within image files because of Reserved Sectors preceding the file system data. These reserved sectors comprise the Boot Sector, followed by up to 2 copies of the File Allocation Table (FAT).
