@@ -13,6 +13,13 @@ This directory contains the Visual Studio 2022 solution and source code for the 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) - Ensure you have Visual Studio 2022 installed on your machine. Download it from the official website if you haven't already.
 
 ***
+### Documentation
+
+- [Doxygen](https://macrium.github.io/mrimgx_file_layout/doxygen/html/files.html) - Generated from the source code comments
+***
+
+
+
 ### Cloning the Repository
 
 First, clone the repository to your local PC. Start VS2022 as an andministrator, and click `Clone a repository`. 
