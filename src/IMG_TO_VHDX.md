@@ -5,7 +5,7 @@
 
 ## `img_to_vhdx.exe` - Read and Restore data from Macrium Reflect X files.
 > [!NOTE]
-> For a demonstration featuring an included image file and automated execution, please visit this [link](https://github.com/macriumsoftware/mrimg_file_layout/tree/main/demo)
+> For a demonstration featuring an included image file and automated execution, please visit this [link](https://github.com/macrium/mrimgx_file_layout/tree/main/demo)
 ***
 | Requirement  | Specification |
 | :---   | :---   |
