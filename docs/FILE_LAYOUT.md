@@ -283,7 +283,7 @@ struct DataBlockIndexElement
 };
 ```
 
-**Reserved Sectors Index** - FAT32 Only. The `ReservedSectorsIndex` consists if a `DataBlockIndexElement` array that references the `data_block`elements from the begining of the partition to the first `data_block` in `DataBlockIndex:block_index_array` (the first file system data block).
+**Reserved Sectors Index** - FAT32 Only. The `ReservedSectorsIndex` consists of a `DataBlockIndexElement` array that references the `data_block` elements from the begining of the partition to the first `data_block` in `DataBlockIndex:block_index_array` (the first file system data block).
 
 ```c++
 struct ReservedSectorsIndex
