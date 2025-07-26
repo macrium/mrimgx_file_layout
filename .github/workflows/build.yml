@@ -1,0 +1,42 @@
+name: img_to_vhdx
+on:
+  push
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install msbuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build img_to_vhdx.exe
+        run: msbuild /p:Configuration=Release src/img_to_vhdx.sln
+
+      - name: Upload img_to_vhdx.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: img_to_vhdx
+          path: src/x64/Release/img_to_vhdx.exe
+
+  test:
+    runs-on: windows-2022
+    needs: build
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download img_to_vhdx.exe
+        uses: actions/download-artifact@v4
+        with:
+          name: img_to_vhdx
+
+      - name: Extract demo image
+        run: Expand-Archive -LiteralPath "demo/demo.zip"
+
+      - name: Convert demo image to vhdx
+        run: ./img_to_vhdx.exe demo/demo/2394E9AA621DDC3A-00-00.mrimgx
