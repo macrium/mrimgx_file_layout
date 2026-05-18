@@ -25,7 +25,7 @@ description, please see https://github.com/facebook/zstd/blob/dev/LICENSE.
 ===============================================================================
 */
 
-#include "..\file_operations\file_operations.h"
+#include "../file_operations/file_operations.h"
 #include "metadataheader.h"
 #include "file_structs.h"
 

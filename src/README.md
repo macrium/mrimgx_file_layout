@@ -6,11 +6,23 @@
 This directory contains the Visual Studio 2022 solution and source code for the project. Follow the steps below to set up your environment and build the executable.
 
 > [!NOTE]
-> See [here](IMG_TO_VHDX.md) for all `img_to_vhdx.exe` command line options.
+> On Windows the CMake build produces `img_to_vhdx.exe` — see [IMG_TO_VHDX.md](IMG_TO_VHDX.md) for its options.
+> On macOS / Linux the same CMake build produces `img_to_raw` instead — see [IMG_TO_RAW.md](IMG_TO_RAW.md).
 ***
 ### Prerequisites
 
+**Windows**
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) - Ensure you have Visual Studio 2022 installed on your machine. Download it from the official website if you haven't already.
+
+**macOS / Linux**
+- `cmake`, `OpenSSL`, `zstd`, `nlohmann_json` headers.
+  - macOS:  `brew install cmake openssl@3 zstd nlohmann-json`
+  - Debian/Ubuntu:  `sudo apt install cmake libssl-dev libzstd-dev nlohmann-json3-dev uuid-dev`
+- Build:
+  ```sh
+  cd src && cmake -B build -S . && cmake --build build -j
+  ```
+- The POSIX target is `img_to_raw` (writes a sparse raw disk image instead of VHDX — `virtdisk.dll` is Windows-only). See [IMG_TO_RAW.md](IMG_TO_RAW.md).
 
 ***
 ### Documentation

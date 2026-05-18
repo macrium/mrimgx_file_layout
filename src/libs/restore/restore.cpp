@@ -2,10 +2,19 @@
 //
 
 #include "pch.h"
-#include ".\zstd\zstd.h"
-#include "..\file_reader\file_reader.h"
-#include "..\file_operations\file_operations.h"
-#include "..\encryption\encryption.h"
+
+// Forward-slash include paths are accepted by both MSVC and clang/gcc;
+// backslashes were Windows-only. Switched to '/' for cross-platform builds.
+#ifdef _WIN32
+#  include "./zstd/zstd.h"   // dependencies/include/zstd on Windows
+#else
+#  include <zstd.h>          // system zstd (Homebrew / apt) on POSIX
+#  include <uuid/uuid.h>     // libuuid for uuid_generate_random
+#endif
+
+#include "../file_reader/file_reader.h"
+#include "../file_operations/file_operations.h"
+#include "../encryption/encryption.h"
 #include "crc32.h"
 #include "restore.h"
 
@@ -52,10 +61,19 @@ void setNewDiskID(file_structs::Disk::DiskLayout& disk)
 		gpt_header* gptHeader = reinterpret_cast<gpt_header*>(disk.track0.data() + bytesPerSector);
 
 		// Create a new GUID to prevent a disk collision
+#ifdef _WIN32
 		GUID newDiskGuid;
 		if (CoCreateGuid(&newDiskGuid) == S_OK) {
 			// Assign the new GUID to the disk
 			memcpy(&gptHeader->disk_guid, &newDiskGuid, sizeof(newDiskGuid));
+#else
+		// POSIX: use libuuid. uuid_t is unsigned char[16], same size as a Windows GUID.
+		uuid_t newDiskGuid;
+		uuid_generate_random(newDiskGuid);
+		{
+			static_assert(sizeof(newDiskGuid) == 16, "uuid_t must be 16 bytes to match GUID layout");
+			memcpy(&gptHeader->disk_guid, newDiskGuid, sizeof(newDiskGuid));
+#endif
 
 			// Before calculating the new CRC32 checksum, the existing checksum in the header must be set to 0.
 			gptHeader->header_crc32 = 0;
@@ -266,7 +284,9 @@ void restoreDisk(const std::wstring& filePath, const std::string& password,const
 				auto blockData = readBlock(backupLayout, ivParams, backupSet.getFileHandle(reservedSectorBlock.file_number), reservedSectorBlock);
 				if (blockData != nullptr) {
 					// Calculate the amount of data to write
-					uint32_t bytesToWrite = min(reservedSectorBlock.block_length, totalBytesToWrite - bytesWritten);
+					// std::min<>() instead of bare min() — works regardless of whether the Windows
+					// 'min' macro from <windows.h> is in scope.
+					uint32_t bytesToWrite = std::min<uint32_t>(reservedSectorBlock.block_length, totalBytesToWrite - bytesWritten);
 					// Write the block data to the target disk
 					writeFile(targetDiskHandle, blockData.get(), bytesToWrite);
 					bytesWritten += bytesToWrite;

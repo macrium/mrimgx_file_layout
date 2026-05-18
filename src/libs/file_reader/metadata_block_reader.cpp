@@ -1,7 +1,11 @@
 ﻿#include "pch.h"
-#include "..\file_operations\file_operations.h"
-#include ".\zstd\zstd.h"
-#include "..\encryption\encryption.h"
+#include "../file_operations/file_operations.h"
+#ifdef _WIN32
+#  include "./zstd/zstd.h"   // bundled in src/dependencies/include/zstd
+#else
+#  include <zstd.h>          // system zstd (Homebrew / apt)
+#endif
+#include "../encryption/encryption.h"
 #include "file_reader.h"
 #include "metadata_block_reader.h"
 #include "metadataheader.h"

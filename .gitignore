@@ -35,3 +35,6 @@
 /src/out/build/x64-debug/build.ninja
 /src/out/build/x64-debug/libs/encryption/encryption.lib
 /src/out/build/x64-debug/libs/vhdx_manager/CMakeFiles/vhdx_manager.dir
+
+# CMake build directory (POSIX)
+build/

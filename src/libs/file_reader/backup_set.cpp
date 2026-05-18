@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "..\file_operations\file_operations.h"
+#include "../file_operations/file_operations.h"
 #include "file_structs.h"
 #include "file_reader.h"
 #include "backup_set.h"

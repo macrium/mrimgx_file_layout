@@ -3,7 +3,7 @@
 #include "enums.h"
 #include "disk_structs.h"
 
-#include "..\encryption\encryption.h"
+#include "../encryption/encryption.h"
 
 #pragma pack(push, 1)
 
@@ -384,8 +384,10 @@ namespace file_structs
 		std::vector<int32_t> merged_files; // REQUIRED
 		bool split_file = false; // [REQUIRED]
 		std::string netbios_name;
-		__time64_t backup_time = 0;
-		__time64_t backupset_time = 0;
+		// __time64_t is a Microsoft typedef for 'long long' (8 bytes).
+		// Use int64_t for cross-platform binary stability.
+		int64_t backup_time = 0;
+		int64_t backupset_time = 0;
 		std::string backup_guid;
 		uint64_t index_file_position = 0; // [REQUIRED]
 		bool delta_index = true; // [REQUIRED]

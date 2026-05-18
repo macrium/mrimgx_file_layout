@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\file_operations\file_operations.h"
+#include "../file_operations/file_operations.h"
 
 typedef std::shared_ptr<file_structs::fileLayout> BackupFileLayout;
 typedef std::vector <BackupFileLayout> BackupSetFileLayouts;

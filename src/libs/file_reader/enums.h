@@ -12,7 +12,7 @@
  */
 
 
-#include "..\..\dependencies\include\nlohmann\json.hpp"
+#include <nlohmann/json.hpp>
 
 namespace ImageEnums
 {

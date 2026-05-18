@@ -14,6 +14,21 @@ We have included a Visual Studio 2022 solution and CMakeLists.txt files, which a
 
 [Visual Studio 2022 Solution](../src)
 
+### macOS / Linux: `img_to_raw`
+On non-Windows platforms the `virtdisk.dll` APIs that `img_to_vhdx` relies on are not available. The same CMake build instead produces `img_to_raw`, a POSIX equivalent that restores the backup to a **sparse raw disk image**. The raw image can be inspected with userspace forensic tools (e.g. the Sleuth Kit) — no kernel-mode mount, macFUSE, or Wine required.
+
+```sh
+brew install cmake openssl@3 zstd nlohmann-json sleuthkit   # macOS
+cd src
+cmake -B build -S .
+cmake --build build -j
+build/img_to_raw/img_to_raw backup.mrimgx backup.raw
+mmls backup.raw                                           # list partitions
+tsk_recover -a -o <sector> backup.raw out_dir/            # extract files
+```
+
+[img_to_raw Usage Details](../src/IMG_TO_RAW.md)
+
 ### Demo
 We've also provided a pre-built demo of `img_to_vhdx.exe`, bundled with a Reflect X image file and a batch file named `demo.bat`. To get started, extract the `img_to_vhdx.zip` file to any directory of your choice and execute `demo.bat`. On completion, a new VHDX file will be generated and automatically mounted, granting you full access to the data contained in the image file.
 

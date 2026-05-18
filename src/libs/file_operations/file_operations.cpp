@@ -3,6 +3,8 @@
 
 #include "pch.h"
 #include "framework.h"
+#include <cstring>     // strerror_r (POSIX)
+#include <cstdlib>     // wcstombs (POSIX)
 
 /*
 ===============================================================================
@@ -51,10 +53,38 @@ typedef std::shared_ptr<std::fstream> SharedFile;
  * @ret
  */
 std::string wideToString(const std::wstring& wstr) {
+#ifdef _WIN32
     std::string str(wstr.length(), ' ');
     size_t convertedChars = 0;
     wcstombs_s(&convertedChars, &str[0], str.size(), wstr.c_str(), _TRUNCATE);
     return str;
+#else
+    // POSIX path: simple ASCII / UTF-8 byte-by-byte conversion.
+    // Avoids dependency on a configured C locale (POSIX `wcstombs` returns
+    // (size_t)-1 under the default "C" locale for any non-ASCII codepoint,
+    // which is hostile when the input is genuine UTF-8 from argv).
+    std::string out;
+    out.reserve(wstr.size());
+    for (wchar_t wc : wstr) {
+        uint32_t cp = static_cast<uint32_t>(wc);
+        if (cp < 0x80) {
+            out += static_cast<char>(cp);
+        } else if (cp < 0x800) {
+            out += static_cast<char>(0xC0 | (cp >> 6));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
+        } else if (cp < 0x10000) {
+            out += static_cast<char>(0xE0 | (cp >> 12));
+            out += static_cast<char>(0x80 | ((cp >> 6) & 0x3F));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
+        } else {
+            out += static_cast<char>(0xF0 | (cp >> 18));
+            out += static_cast<char>(0x80 | ((cp >> 12) & 0x3F));
+            out += static_cast<char>(0x80 | ((cp >> 6) & 0x3F));
+            out += static_cast<char>(0x80 | (cp & 0x3F));
+        }
+    }
+    return out;
+#endif
 }
 
 /**
@@ -68,14 +98,29 @@ std::string wideToString(const std::wstring& wstr) {
  */
 std::fstream* openFile(const std::wstring& filename, bool read_only) {
     std::fstream* file = new std::fstream();
+#ifdef _WIN32
+    // MSVC supports opening fstream with a wide-char filename directly.
     if (read_only)
-		file->open(filename, std::ios::in | std::ios::binary);
-	else
-		file->open(filename, std::ios::in | std::ios::out | std::ios::binary);
+        file->open(filename, std::ios::in | std::ios::binary);
+    else
+        file->open(filename, std::ios::in | std::ios::out | std::ios::binary);
+#else
+    // libstdc++/libc++ on POSIX only takes a narrow filename.
+    std::string narrowName = wideToString(filename);
+    if (read_only)
+        file->open(narrowName, std::ios::in | std::ios::binary);
+    else
+        file->open(narrowName, std::ios::in | std::ios::out | std::ios::binary);
+#endif
 
     if (!file->is_open()) {
-        char errorBuffer[100];
+        char errorBuffer[100] = { 0 };
+#ifdef _WIN32
         strerror_s(errorBuffer, sizeof(errorBuffer), errno);
+#else
+        // XSI-compliant strerror_r — returns int and writes into the buffer.
+        (void)strerror_r(errno, errorBuffer, sizeof(errorBuffer));
+#endif
         std::string errorMessage = "Could not open file: " + wideToString(filename);
         errorMessage += ". Error: ";
         errorMessage += errorBuffer;

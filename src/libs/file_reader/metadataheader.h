@@ -29,9 +29,14 @@ const char* const EXT_PAR_TABLE = "$EPT    ";  // Extended Partition Table data
 #define BLOCK_NAME_LENGTH 8                    // Length of block name strings
 /************************************************************************************************/
 
+#include <cstdint>
+
 const char  MAGIC_BYTES_VX[] = { "MACRIUM_FILE" };  // vX magic file bytes
 // Don't write out the null terminator
-const unsigned long MAGIC_BYTES_VX_SIZE = (unsigned long)(sizeof(MAGIC_BYTES_VX) - 1);
+// NOTE: use uint32_t (not 'unsigned long') for cross-platform binary stability.
+// On Windows MSVC 'unsigned long' is 4 bytes (LLP64); on macOS/Linux clang/gcc it is 8 bytes (LP64).
+// MetadataBlockHeader is read directly from disk so its field widths must be fixed.
+const uint32_t MAGIC_BYTES_VX_SIZE = (uint32_t)(sizeof(MAGIC_BYTES_VX) - 1);
 
 struct HeaderFlags
 {
@@ -47,7 +52,7 @@ struct HeaderFlags
 struct MetadataBlockHeader
 {
     char  block_name[8] = { 0 };      // Name of the block
-    unsigned long block_Length = 0;   // Length of the block
+    uint32_t block_Length = 0;        // Length of the block (was 'unsigned long' — switched for cross-platform sizeof stability)
     unsigned char  hash[16] = { 0 }; // MD5 hash of the block
     HeaderFlags flags;               // Flags for the block
     char padding[3] = { 0 };         // Padding for alignment
